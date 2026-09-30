@@ -5,15 +5,14 @@ class Solution(object):
         :type k: int
         :rtype: bool
         """
-        freq = {}
+        duplicates = {}
         for i in range(len(nums)):
-            if nums[i] in freq:
-                distance = abs(freq[nums[i]]-i)
+            if nums[i] in duplicates:
+                distance = abs(duplicates[nums[i]]-i)
                 if distance <= k:
-                    print(distance)
                     return True
                 else:
-                    freq[nums[i]] = i
+                    duplicates[nums[i]] = i
             else:
-                freq[nums[i]] = i
+                duplicates[nums[i]] = i
         return False
