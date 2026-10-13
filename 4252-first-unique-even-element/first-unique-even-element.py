@@ -10,9 +10,8 @@ class Solution(object):
                 frequency[i] += 1
             else:
                 frequency[i] = 1
-        for i in frequency:
+        for i in nums:
             if frequency[i] == 1:
                 if i%2 == 0:
                     return i
         return -1 
-        
